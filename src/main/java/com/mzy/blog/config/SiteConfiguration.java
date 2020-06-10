@@ -21,10 +21,7 @@ import javax.annotation.PostConstruct;
 import java.util.Map;
 import java.util.concurrent.ThreadPoolExecutor;
 
-/**
- * @author : langhsu
- * @since 3.0
- */
+
 @Configuration
 @EnableAsync
 public class SiteConfiguration {

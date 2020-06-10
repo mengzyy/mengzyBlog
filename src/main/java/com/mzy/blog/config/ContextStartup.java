@@ -22,11 +22,7 @@ import javax.servlet.ServletContext;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 加载配置信息到系统
- *
- * @since 3.0
- */
+
 @Slf4j
 @Order(2)
 @Component
@@ -48,12 +44,11 @@ public class ContextStartup implements ApplicationRunner,ServletContextAware {
 
     @Override
     public void run(ApplicationArguments applicationArguments) throws Exception {
-        log.info("initialization ...");
+        log.info("加载配置文件 ...");
         //加载全部配置至web全局servletContext
         reloadOptions(true);
-        //加载栏目
         resetChannels();
-        log.info("OK, completed");
+        log.info("配置文件加载成功");
     }
 
     @Override
@@ -64,25 +59,7 @@ public class ContextStartup implements ApplicationRunner,ServletContextAware {
     public void reloadOptions(boolean startup) {
         //获取数据库中的网站全部配置
         List<Options> options = optionsService.findAll();
-        log.info("find options ({})...", options.size());
-
-        //null
-        //没有初始化，则调用运行sql文件
-        if (startup && CollectionUtils.isEmpty(options)) {
-            try {
-                log.info("init options...");
-                Resource resource = new ClassPathResource("/scripts/schema.sql");
-                optionsService.initSettings(resource);
-                options = optionsService.findAll();
-            } catch (Exception e) {
-                log.error("------------------------------------------------------------");
-                log.error("-          ERROR: The database is not initialized          -");
-                log.error("------------------------------------------------------------");
-                log.error(e.getMessage(), e);
-                System.exit(1);
-            }
-        }
-
+        log.info("加载配置项 ({})...", options.size());
         //添加数据库配置同时添加配置文件配置
         Map<String, String> map = siteOptions.getOptions();
         options.forEach(opt -> {
