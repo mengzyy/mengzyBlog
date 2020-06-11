@@ -55,8 +55,8 @@
     <script src="${base}/dist/js/sea.config.js"></script>
 
     <!-- Favicons -->
-    <link href="${options['site_favicon']}" rel="apple-touch-icon-precomposed" />
-    <link href="${options['site_favicon']}>" rel="shortcut icon" />
+    <link href="<@resource src=options['site_favicon']/>" rel="apple-touch-icon-precomposed" />
+    <link href="<@resource src=options['site_favicon']/>" rel="shortcut icon" />
 </head>
 <body>
     <!-- header -->

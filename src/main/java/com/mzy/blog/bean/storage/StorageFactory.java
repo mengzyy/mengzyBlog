@@ -10,6 +10,7 @@
 package com.mzy.blog.bean.storage;
 
 
+import com.mzy.blog.bean.storage.impl.FastDfsStorageImpl;
 import com.mzy.blog.bean.storage.impl.NativeStorageImpl;
 import com.mzy.blog.config.SiteOptions;
 import org.apache.commons.lang3.StringUtils;
@@ -51,6 +52,7 @@ public class StorageFactory implements InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         fileRepoMap.put("native", applicationContext.getBean(NativeStorageImpl.class));
+        fileRepoMap.put("fastdfs", applicationContext.getBean(FastDfsStorageImpl.class));
 //        fileRepoMap.put("upyun", applicationContext.getBean(UpYunStorageImpl.class));
 //        fileRepoMap.put("aliyun", applicationContext.getBean(AliyunStorageImpl.class));
 //        fileRepoMap.put("qiniu", applicationContext.getBean(QiniuStorageImpl.class));

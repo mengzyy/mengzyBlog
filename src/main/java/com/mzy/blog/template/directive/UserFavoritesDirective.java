@@ -13,12 +13,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
-/**
- * 根据作者取收藏列表
- *
- * @author landy
- * @since 3.0
- */
+
 @Component
 public class UserFavoritesDirective extends TemplateDirective {
     @Autowired

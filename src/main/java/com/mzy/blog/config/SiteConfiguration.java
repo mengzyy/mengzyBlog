@@ -38,6 +38,7 @@ public class SiteConfiguration {
         configuration.setSharedVariable("shiro", new ShiroTags());
     }
 
+    //网站配置线程池，为邮件服务使用
     @Bean
     public TaskExecutor taskExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();

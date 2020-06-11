@@ -24,7 +24,7 @@
                     <div class="form-group">
                         <div id="ajax_login_message" class="text-danger"></div>
                     </div>
-<#--                    <@controls name="register">-->
+                    <@controls name="register">
                         <fieldset class="form-group">
 			    <#if site.hasValue("weibo_client_id")>
                             <a class="btn btn-default btn-block" href="${base}/oauth/callback/call_weibo">
@@ -42,7 +42,7 @@
                             </a>
                             </#if>
                         </fieldset>
-<#--                    </@controls>-->
+                    </@controls>
                 </form>
             </div>
         </div><!-- /.modal-content -->
@@ -73,7 +73,7 @@
                     <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="${base}/">
-                    <img src="${options['site_logo']}"/>
+                    <img src="<@resource src=options['site_logo']/>"/>
                 </a>
             </div>
             <div class="collapse navbar-collapse">
@@ -128,9 +128,9 @@
                     </li>
 				<#else>
                     <li><a href="${base}/login" class="btn btn-default btn-sm signup">登录</a></li>
-<#--                    <@controls name="register">-->
+                    <@controls name="register">
                         <li><a href="${base}/register" class="btn btn-primary btn-sm signup">注册</a></li>
-<#--                    </@controls>-->
+                    </@controls>
 				</#if>
 
                 </ul>

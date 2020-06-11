@@ -244,6 +244,13 @@
             <artifactId>oh-my-email</artifactId>
             <version>0.0.4</version>
         </dependency>
+
+        <!--FastDfs客户端-->
+        <dependency>
+            <groupId>com.github.tobato</groupId>
+            <artifactId>fastdfs-client</artifactId>
+            <version>1.26.3</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -252,6 +259,30 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.4.13</version>
+                <configuration>
+                    <!--镜像名称-->
+                    <imageName>mengzy:blog</imageName>
+                    <!--dockerfile服务器 -->
+                    <dockerHost>http://47.93.29.212:2375</dockerHost>
+                    <!--dockerfile地址 -->
+                    <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
+
+
+
+
         </plugins>
     </build>
 

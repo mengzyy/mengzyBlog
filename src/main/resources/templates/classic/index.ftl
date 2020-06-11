@@ -3,8 +3,8 @@
 
 <@layout>
 <!-- top -->
-<#--<@contents channelId=topId size=3>-->
-<#--    <#if  results.content?size gt 0>-->
+<@contents channelId=topId size=3>
+    <#if  results.content?size gt 0>
         <div class="row banner">
             <#list results.content as row>
                 <div class="banner-item col-xs-12 col-sm-4 col-md-4">
@@ -25,8 +25,8 @@
                 </div>
             </#list>
         </div>
-<#--    </#if>-->
-<#--</@contents>-->
+    </#if>
+</@contents>
 
 <!-- top/end -->
 

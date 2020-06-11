@@ -16,10 +16,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 
-/**
- * @author langhsu
- * @since  3.0
- */
+
 @Slf4j
 @Component
 public class NativeStorageImpl extends AbstractStorage {

@@ -19,10 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * @author langhsu
- *
- */
+
 @Controller
 public class IndexController extends BaseController{
 	

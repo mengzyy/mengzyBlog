@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8082
   undertow:
     io-threads: 2
     worker-threads: 32
@@ -12,7 +12,7 @@ spring:
     #continue-on-error: false
     #sql-script-encoding: utf-8
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost/db_mblog?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://122.112.150.62:3306/db_mblog?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
     username: root
     password: 196801135
   jpa:
@@ -90,3 +90,25 @@ site:
     editor: markdown
     thumbnail_channel_size: 200x112
     thumbnail_post_size: 360x200
+    storage_scheme: fastdfs
+    site_copyright: Mengzyy
+#    storage_scheme: native
+
+#fastdfs配置
+###################以下为fdfs增加的配置###########################
+fdfs:
+  reqHost: 122.112.150.62
+  reqPort: 8888
+  #分布式文件系统FastDFS配置
+  #fdfs.pool.jmx-enabled=false
+  thumb-image.width: 150
+  thumb-image.height: 150
+  connect-timeout: 600
+  so-timeout: 1500
+  trackerList: 122.112.150.62:22122
+  thumbImage.height: 150
+  thumbImage.width: 150
+  #spring.jmx.enabled=false
+  pool:
+    max-total: 10
+###################以上为fdfs增加的配置###########################
