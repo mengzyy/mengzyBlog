@@ -30,7 +30,8 @@ http://47.93.29.212:8082
 若没有自己的图片服务器，如果关闭fastdfs，改成本次存储
 
 改动yml即可
-![](https://imgkr.cn-bj.ufileos.com/a58d7a96-3c3c-4489-863e-657c80c23c0c.gif)
+
+![](https://imgkr.cn-bj.ufileos.com/61aee581-6252-4e12-b04b-f7dc002f362b.png)
 
 #### Question2
 
