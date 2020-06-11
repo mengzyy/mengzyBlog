@@ -8,16 +8,18 @@ http://47.93.29.212:8082
 
 本项目为开源博客 https://github.com/langhsu/mblog 的改进版
 糅合了自己的fastdfs图片服务器，无需将图片存储在本地
-并且内嵌了docker插件，无需改动配置文件，即可多环境运行
+并且内嵌了docker插件，无需改动配置文件，即可多环境运行（仅仅改动数据库的url）
 
 #### 技术介绍
 
-MySQL
-Spring-boot
-Spring-data-jpa
-Shiro
-Lombok
-Freemarker
-Bootstrap
-SeaJs
-docker（如果需要docker部署的话）
++ MySQL
++ Spring-boot
++ Spring-data-jpa
++ Shiro
++ Lombok
++ Freemarker
++ Bootstrap
++ SeaJs
++ docker（如果需要docker部署的话）
++ fastdfs（需要自己配服务器）
++ OhMyMail
