@@ -90,12 +90,13 @@ site:
     editor: markdown
     thumbnail_channel_size: 200x112
     thumbnail_post_size: 360x200
+#    storage_scheme: native
     storage_scheme: fastdfs
     site_copyright: Mengzyy
-#    storage_scheme: native
+
 
 #fastdfs配置
-###################以下为fdfs增加的配置###########################
+
 fdfs:
   reqHost: 122.112.150.62
   reqPort: 8888
