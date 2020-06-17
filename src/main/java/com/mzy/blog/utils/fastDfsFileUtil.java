@@ -23,6 +23,7 @@ public class fastDfsFileUtil {
 
     @Autowired
     private FastFileStorageClient storageClient;
+
     @Value("${fdfs.reqHost}")
     private String fastDfsNginxIp;
 
